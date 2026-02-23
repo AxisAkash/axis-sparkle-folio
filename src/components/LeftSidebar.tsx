@@ -21,17 +21,15 @@ const LeftSidebar = () => {
 
       {/* Name */}
       <h1 className="mb-1 font-heading text-xl font-bold">Rakibul Islam Akash</h1>
+      <p className="mb-1 font-body text-xs font-medium text-primary">CSE Undergraduate & Developer</p>
+      <p className="mb-4 font-body text-xs text-muted-foreground">Bashundhara R/A, Dhaka</p>
 
       {/* Bio */}
       <p className="mb-6 text-center font-body text-sm leading-relaxed text-muted-foreground">
-        Junior Graphics Designer and App Developer passionate about blending
-        creativity with technology. I build modern web and desktop applications
-        using C#, React, and Node.js, with a strong focus on clean UI and smooth
-        user experience.
-        <br />
-        <br />
-        Currently studying Computer Science and Engineering at AIUB and always
-        eager to learn, collaborate, and turn ideas into real projects.
+        Motivated Computer Science student with a passion for software
+        development, UI/UX design, and creative digital projects. Seeking
+        opportunities to deliver impactful, user-centered solutions in
+        collaborative environments.
       </p>
 
       {/* Social Links */}

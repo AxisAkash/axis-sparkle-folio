@@ -2,14 +2,23 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 const topProjects = [
-  { title: ".NET Framework Developer — Rental Management System" },
-  { title: "AI Calculator — Python & TensorFlow" },
-  { title: "Digital Currency Converter — JavaScript" },
+  {
+    title: ".NET Framework Developer — Rental Management System",
+    link: "https://github.com/AxisAkash",
+  },
+  {
+    title: "Game Designer — The Line Zen 2 Adventure",
+    link: "https://github.com/AxisAkash",
+  },
+  {
+    title: "University Lost & Found System — Java",
+    link: "https://github.com/AxisAkash",
+  },
 ];
 
 const papers = [
-  { title: "Privacy Awareness" },
-  { title: "Software Quality Assurance" },
+  { title: "Privacy Awareness", link: "#" },
+  { title: "Software Quality Assurance", link: "#" },
 ];
 
 const RightSidebar = () => {
@@ -28,17 +37,20 @@ const RightSidebar = () => {
       </div>
 
       {topProjects.map((proj, i) => (
-        <div
+        <a
           key={i}
-          className="card-gradient flex items-start justify-between rounded-xl border border-border p-4"
+          href={proj.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card-gradient flex items-start justify-between rounded-xl border border-border p-4 transition-all hover:border-primary/40"
         >
           <p className="pr-2 font-body text-xs leading-relaxed text-foreground">
             {proj.title}
           </p>
-          <button className="shrink-0 rounded border border-border bg-secondary px-3 py-1 font-body text-xs text-secondary-foreground transition-all hover:border-primary/40">
-            View
-          </button>
-        </div>
+          <span className="shrink-0 flex items-center gap-1 rounded border border-border bg-secondary px-3 py-1 font-body text-xs text-secondary-foreground transition-all hover:border-primary/40 hover:text-primary">
+            View <ExternalLink size={10} />
+          </span>
+        </a>
       ))}
 
       {/* Papers */}
@@ -51,14 +63,21 @@ const RightSidebar = () => {
       {papers.map((paper, i) => (
         <div
           key={i}
-          className="card-gradient flex items-center justify-between rounded-xl border border-border p-4"
+          className="card-gradient flex items-center justify-between rounded-xl border border-border p-4 transition-all hover:border-primary/30"
         >
           <p className="font-heading text-sm font-semibold">{paper.title}</p>
-          <button className="shrink-0 rounded border border-border bg-secondary px-3 py-1 font-body text-xs text-secondary-foreground transition-all hover:border-primary/40">
-            View
-          </button>
+          <span className="shrink-0 rounded border border-border bg-secondary px-3 py-1 font-body text-xs text-muted-foreground">
+            Coming Soon
+          </span>
         </div>
       ))}
+
+      {/* Reference */}
+      <div className="mt-2 rounded-xl border border-border bg-secondary/50 p-4">
+        <h3 className="mb-1 font-heading text-xs font-semibold text-muted-foreground">Reference</h3>
+        <p className="font-body text-xs text-foreground">Khairul Alam Robin</p>
+        <p className="font-body text-xs text-muted-foreground">Lecturer, AIUB</p>
+      </div>
     </motion.aside>
   );
 };
