@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 import { Mail, Linkedin, Github, MessageCircle, Monitor } from "lucide-react";
 import profileAvatar from "@/assets/profile-avatar.png";
 
+const languages = [
+  { name: "Bengali", level: "Native" },
+  { name: "English", level: "Fluent" },
+  { name: "Hindi", level: "Basic" },
+];
+
 const LeftSidebar = () => {
   return (
     <motion.aside
@@ -21,15 +27,12 @@ const LeftSidebar = () => {
 
       {/* Name */}
       <h1 className="mb-1 font-heading text-xl font-bold">Rakibul Islam Akash</h1>
-      <p className="mb-1 font-body text-xs font-medium text-primary">CSE Undergraduate & Developer</p>
-      <p className="mb-4 font-body text-xs text-muted-foreground">Bashundhara R/A, Dhaka</p>
+      <p className="mb-1 font-body text-xs font-medium text-primary">Software Developer | CSE @ AIUB</p>
+      <p className="mb-4 font-body text-xs text-muted-foreground">Dhaka, Bangladesh</p>
 
-      {/* Bio */}
+      {/* Tagline */}
       <p className="mb-6 text-center font-body text-sm leading-relaxed text-muted-foreground">
-        Motivated Computer Science student with a passion for software
-        development, UI/UX design, and creative digital projects. Seeking
-        opportunities to deliver impactful, user-centered solutions in
-        collaborative environments.
+        Building intelligent, efficient, and innovative solutions with AI and web technologies. I specialize in AI-powered web apps and data-driven tools.
       </p>
 
       {/* Social Links */}
@@ -48,7 +51,7 @@ const LeftSidebar = () => {
           className="flex items-center justify-center gap-2 rounded-lg border border-border bg-secondary px-3 py-2.5 font-body text-sm text-secondary-foreground transition-all hover:border-primary/40"
         >
           <Linkedin size={16} className="text-primary" />
-          Linkedin
+          LinkedIn
         </a>
         <a
           href="https://github.com/AxisAkash"
@@ -57,7 +60,7 @@ const LeftSidebar = () => {
           className="flex items-center justify-center gap-2 rounded-lg border border-border bg-secondary px-3 py-2.5 font-body text-sm text-secondary-foreground transition-all hover:border-primary/40"
         >
           <Github size={16} className="text-primary" />
-          Github
+          GitHub
         </a>
         <a
           href="https://wa.me/8801973096450"
@@ -75,25 +78,27 @@ const LeftSidebar = () => {
         href="https://aquamarine-concha-57fd70.netlify.app/"
         target="_blank"
         rel="noopener noreferrer"
-        className="mb-6 flex items-center justify-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2.5 font-body text-sm text-secondary-foreground transition-all hover:border-primary/40"
+        className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2.5 font-body text-sm text-secondary-foreground transition-all hover:border-primary/40"
       >
         <Monitor size={16} className="text-primary" />
         Portfolio
       </a>
 
-      {/* Languages */}
+      {/* Languages with proficiency */}
       <div className="w-full">
-        <h2 className="mb-3 font-heading text-lg font-bold">Language</h2>
-        <div className="grid grid-cols-3 gap-2">
-          <span className="rounded-lg border border-border bg-secondary py-2 text-center font-body text-xs text-secondary-foreground">
-            Bangla
-          </span>
-          <span className="rounded-lg border border-border bg-secondary py-2 text-center font-body text-xs text-secondary-foreground">
-            English
-          </span>
-          <span className="rounded-lg border border-border bg-secondary py-2 text-center font-body text-xs text-secondary-foreground">
-            Hindi
-          </span>
+        <h2 className="mb-3 font-heading text-lg font-bold">Languages</h2>
+        <div className="flex flex-col gap-2">
+          {languages.map((lang) => (
+            <div
+              key={lang.name}
+              className="flex items-center justify-between rounded-lg border border-border bg-secondary px-3 py-2"
+            >
+              <span className="font-body text-xs text-secondary-foreground">{lang.name}</span>
+              <span className="rounded bg-primary/15 px-2 py-0.5 font-body text-[10px] font-medium text-primary">
+                {lang.level}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 

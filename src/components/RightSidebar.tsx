@@ -3,22 +3,30 @@ import { ExternalLink } from "lucide-react";
 
 const topProjects = [
   {
-    title: ".NET Framework Developer — Rental Management System",
+    title: "AI Calculator — NLP-powered intelligent calculator",
     link: "https://github.com/AxisAkash",
   },
   {
-    title: "Game Designer — The Line Zen 2 Adventure",
+    title: "Digital Currency Converter — Real-time API rates",
     link: "https://github.com/AxisAkash",
   },
   {
-    title: "University Lost & Found System — Java",
+    title: "Rental Management System — .NET & SQL",
     link: "https://github.com/AxisAkash",
   },
 ];
 
-const papers = [
-  { title: "Privacy Awareness", link: "#" },
-  { title: "Software Quality Assurance", link: "#" },
+const researchHighlights = [
+  {
+    title: "How AI Companions Shape Emotional Decision-Making Among Students",
+    status: "Published",
+    link: "#",
+  },
+  {
+    title: "Privacy Awareness in the Digital Age",
+    status: "In Progress",
+    link: "#",
+  },
 ];
 
 const RightSidebar = () => {
@@ -53,31 +61,32 @@ const RightSidebar = () => {
         </a>
       ))}
 
-      {/* Papers */}
+      {/* Research Papers */}
       <div className="mt-2 rounded-xl border border-border bg-secondary p-3">
         <h2 className="text-center font-heading text-base font-bold text-secondary-foreground">
-          Papers
+          Research Papers
         </h2>
       </div>
 
-      {papers.map((paper, i) => (
+      {researchHighlights.map((paper, i) => (
         <div
           key={i}
           className="card-gradient flex items-center justify-between rounded-xl border border-border p-4 transition-all hover:border-primary/30"
         >
-          <p className="font-heading text-sm font-semibold">{paper.title}</p>
-          <span className="shrink-0 rounded border border-border bg-secondary px-3 py-1 font-body text-xs text-muted-foreground">
-            Coming Soon
+          <div className="pr-2">
+            <p className="font-heading text-xs font-semibold leading-relaxed">{paper.title}</p>
+          </div>
+          <span
+            className={`shrink-0 rounded px-3 py-1 font-body text-xs ${
+              paper.status === "Published"
+                ? "border border-primary/30 bg-primary/15 text-primary"
+                : "border border-border bg-secondary text-muted-foreground"
+            }`}
+          >
+            {paper.status}
           </span>
         </div>
       ))}
-
-      {/* Reference */}
-      <div className="mt-2 rounded-xl border border-border bg-secondary/50 p-4">
-        <h3 className="mb-1 font-heading text-xs font-semibold text-muted-foreground">Reference</h3>
-        <p className="font-body text-xs text-foreground">Khairul Alam Robin</p>
-        <p className="font-body text-xs text-muted-foreground">Lecturer, AIUB</p>
-      </div>
     </motion.aside>
   );
 };
