@@ -20,10 +20,10 @@ const researchHighlights = [
   {
     title: "How AI Companions Shape Emotional Decision-Making Among Students",
     status: "Published",
-    link: "#",
+    link: "https://www.researchgate.net/",
   },
   {
-    title: "Privacy Awareness in the Digital Age",
+    title: "Silent Struggles: Adolescent Anxiety & Parent-Child Communication",
     status: "In Progress",
     link: "#",
   },
@@ -69,8 +69,11 @@ const RightSidebar = () => {
       </div>
 
       {researchHighlights.map((paper, i) => (
-        <div
+        <a
           key={i}
+          href={paper.link}
+          target="_blank"
+          rel="noopener noreferrer"
           className="card-gradient flex items-center justify-between rounded-xl border border-border p-4 transition-all hover:border-primary/30"
         >
           <div className="pr-2">
@@ -85,7 +88,7 @@ const RightSidebar = () => {
           >
             {paper.status}
           </span>
-        </div>
+        </a>
       ))}
     </motion.aside>
   );

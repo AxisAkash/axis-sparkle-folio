@@ -39,7 +39,7 @@ const projectsData = [
     tech: "Python, TensorFlow, NLP",
     period: "Personal Project",
     description:
-      "Developed an AI-powered calculator that uses NLP for user-friendly conversational interaction, parsing natural language input to perform accurate calculations via machine learning models.",
+      "Developed an AI-powered calculator using Python and TensorFlow, integrating NLP for seamless user interaction and real-time calculation.",
     github: "https://github.com/AxisAkash",
     demo: null,
   },
@@ -48,7 +48,7 @@ const projectsData = [
     tech: "JavaScript, REST API",
     period: "Personal Project",
     description:
-      "Built a real-time currency converter with JavaScript, integrating a REST API for live exchange rate fetching — enabling quick and accurate digital currency conversions with a responsive UI.",
+      "Built a real-time currency converter with JavaScript, using an API for live exchange rates and supporting global currencies.",
     github: "https://github.com/AxisAkash",
     demo: null,
   },
@@ -57,7 +57,7 @@ const projectsData = [
     tech: ".NET, C#, SQL",
     period: "AIUB, 2024–Present",
     description:
-      "Created a full-featured rental management system using C# and .NET Framework, focusing on clean UI design, SQL-based authentication, secure tenant data storage, and automated billing.",
+      "Developed a rental management system using C# and .NET Framework, with SQL-based authentication and automated billing.",
     github: "https://github.com/AxisAkash",
     demo: null,
   },
@@ -85,40 +85,46 @@ const skillsData = [
   {
     category: "Programming Languages",
     items: [
-      { name: "C++", level: 80 },
-      { name: "Java", level: 75 },
-      { name: "C#", level: 70 },
-      { name: "Python", level: 70 },
-      { name: "SQL", level: 75 },
-      { name: "JavaScript", level: 65 },
+      { name: "C++", level: 90, proficiency: "Expert" },
+      { name: "Java", level: 90, proficiency: "Expert" },
+      { name: "C#", level: 90, proficiency: "Expert" },
+      { name: "SQL", level: 70, proficiency: "Intermediate" },
+      { name: "Python", level: 50, proficiency: "Beginner" },
     ],
   },
   {
     category: "Frameworks & Tools",
     items: [
-      { name: ".NET Framework", level: 70 },
-      { name: "TensorFlow", level: 55 },
-      { name: "Visual Studio", level: 80 },
-      { name: "REST APIs", level: 65 },
-      { name: "Node.js", level: 50 },
+      { name: ".NET Framework", level: 90, proficiency: "Expert" },
+      { name: "Visual Studio", level: 90, proficiency: "Expert" },
+      { name: "Figma", level: 70, proficiency: "Intermediate" },
+      { name: "Adobe InDesign", level: 70, proficiency: "Intermediate" },
+      { name: "Canva", level: 50, proficiency: "Beginner" },
     ],
   },
   {
-    category: "Design Tools",
+    category: "Design",
     items: [
-      { name: "Figma", level: 75 },
-      { name: "Adobe InDesign", level: 60 },
-      { name: "Canva", level: 85 },
-      { name: "CapCut", level: 70 },
+      { name: "UI/UX Design", level: 90, proficiency: "Expert" },
+      { name: "Graphic Design", level: 90, proficiency: "Expert" },
+      { name: "Prototyping", level: 70, proficiency: "Intermediate" },
+      { name: "Brand Visuals", level: 70, proficiency: "Intermediate" },
     ],
   },
   {
     category: "Soft Skills",
     items: [
-      { name: "Leadership", level: 85 },
-      { name: "Communication", level: 80 },
-      { name: "Strategic Thinking", level: 75 },
-      { name: "Time Management", level: 80 },
+      { name: "Leadership", level: 90, proficiency: "Expert" },
+      { name: "Communication", level: 90, proficiency: "Expert" },
+      { name: "Strategic Thinking", level: 70, proficiency: "Intermediate" },
+      { name: "Time Management", level: 50, proficiency: "Beginner" },
+    ],
+  },
+  {
+    category: "Other Tools",
+    items: [
+      { name: "Microsoft 365", level: 90, proficiency: "Expert" },
+      { name: "CapCut", level: 70, proficiency: "Intermediate" },
     ],
   },
 ];
@@ -128,20 +134,13 @@ const researchData = [
     title: "How AI Companions Shape Emotional Decision-Making Among Students",
     summary:
       "Explores the influence of AI companion tools on the emotional reasoning and decision-making processes of university students.",
-    link: "#",
+    link: "https://www.researchgate.net/",
     status: "Published",
   },
   {
-    title: "Privacy Awareness in the Digital Age",
+    title: "Silent Struggles: The Impact of Adolescent Anxiety Disorders on Parent-Child Communication Patterns",
     summary:
-      "Examines user awareness and behavior regarding data privacy across digital platforms.",
-    link: "#",
-    status: "In Progress",
-  },
-  {
-    title: "Software Quality Assurance Best Practices",
-    summary:
-      "A survey of modern SQA methodologies and their effectiveness in agile development environments.",
+      "Investigates how anxiety disorders in adolescents affect communication dynamics within parent-child relationships.",
     link: "#",
     status: "In Progress",
   },
@@ -156,6 +155,13 @@ const CenterContent = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.1 }}
     >
+      {/* Bio Section */}
+      <div className="card-gradient mb-6 rounded-xl border border-border p-5">
+        <p className="font-body text-sm leading-relaxed text-muted-foreground">
+          I'm a computer science student with a passion for building intelligent, user-friendly web applications and exploring the intersection of AI and software development. I strive to solve real-world problems with innovative technology.
+        </p>
+      </div>
+
       {/* Header with tabs and CV download */}
       <div className="mb-6 flex flex-wrap items-center gap-3">
         {tabs.map((tab) => (
@@ -266,8 +272,8 @@ const CenterContent = () => {
                         <span className="font-body text-xs text-secondary-foreground">
                           {skill.name}
                         </span>
-                        <span className="font-body text-[10px] text-muted-foreground">
-                          {skill.level}%
+                        <span className="rounded bg-primary/10 px-2 py-0.5 font-body text-[10px] font-medium text-primary">
+                          {skill.proficiency}
                         </span>
                       </div>
                       <div className="h-1.5 w-full overflow-hidden rounded-full bg-secondary">
@@ -312,13 +318,26 @@ const CenterContent = () => {
                     rel="noopener noreferrer"
                     className="flex w-fit items-center gap-1 rounded border border-primary/40 bg-primary/10 px-3 py-1.5 font-body text-xs text-primary transition-all hover:bg-primary hover:text-primary-foreground"
                   >
-                    Read Paper <ExternalLink size={10} />
+                    Read on ResearchGate <ExternalLink size={10} />
                   </a>
                 )}
               </div>
             ))}
         </motion.div>
       </AnimatePresence>
+
+      {/* CTA Section */}
+      <div className="mt-8 card-gradient rounded-xl border border-border p-6 text-center">
+        <p className="mb-4 font-body text-sm leading-relaxed text-muted-foreground">
+          Feel free to reach out if you're interested in collaborating or discussing potential opportunities.
+        </p>
+        <a
+          href="mailto:rakibulislamakash40@gmail.com"
+          className="inline-block rounded-lg bg-primary px-6 py-2.5 font-heading text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
+        >
+          Get in Touch
+        </a>
+      </div>
     </motion.div>
   );
 };
