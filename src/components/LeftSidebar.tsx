@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, MessageCircle, Monitor } from "lucide-react";
+import { Mail, Linkedin, Github, MessageCircle } from "lucide-react";
 import profileAvatar from "@/assets/profile-avatar.png";
 
 const languages = [
@@ -27,12 +27,12 @@ const LeftSidebar = () => {
 
       {/* Name */}
       <h1 className="mb-1 font-heading text-xl font-bold">Rakibul Islam Akash</h1>
-      <p className="mb-1 font-body text-xs font-medium text-primary">Software Developer | CSE @ AIUB</p>
+      <p className="mb-1 font-body text-xs font-medium text-primary">CSE Undergraduate & Software Developer</p>
       <p className="mb-4 font-body text-xs text-muted-foreground">Dhaka, Bangladesh</p>
 
-      {/* Tagline */}
+      {/* Bio */}
       <p className="mb-6 text-center font-body text-sm leading-relaxed text-muted-foreground">
-        Building intelligent, efficient, and innovative solutions with AI and web technologies. I specialize in AI-powered web apps and data-driven tools.
+        Building smart, efficient solutions with AI and web technologies. I specialize in AI-powered web apps and data-driven tools.
       </p>
 
       {/* Social Links */}
@@ -73,18 +73,16 @@ const LeftSidebar = () => {
         </a>
       </div>
 
-      {/* Portfolio Link */}
+      {/* CV Download */}
       <a
-        href="https://aquamarine-concha-57fd70.netlify.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2.5 font-body text-sm text-secondary-foreground transition-all hover:border-primary/40"
+        href="/Rakibul_Islam_Akash_CSE_AIUB_CV.pdf"
+        download
+        className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-4 py-2.5 font-heading text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground"
       >
-        <Monitor size={16} className="text-primary" />
-        Portfolio
+        Download CV
       </a>
 
-      {/* Languages with proficiency */}
+      {/* Languages */}
       <div className="w-full">
         <h2 className="mb-3 font-heading text-lg font-bold">Languages</h2>
         <div className="flex flex-col gap-2">
@@ -102,7 +100,7 @@ const LeftSidebar = () => {
         </div>
       </div>
 
-      {/* Contact Me Button */}
+      {/* Contact Me */}
       <a
         href="mailto:rakibulislamakash40@gmail.com"
         className="mt-6 w-full rounded-lg bg-secondary py-3 text-center font-heading text-sm font-semibold text-secondary-foreground transition-all hover:bg-primary hover:text-primary-foreground"
