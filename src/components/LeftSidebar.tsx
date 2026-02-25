@@ -45,7 +45,7 @@ const LeftSidebar = () => {
           Email
         </a>
         <a
-          href="https://linkedin.com/in/rakibul-islam-akash-2a0054347"
+          href="https://www.linkedin.com/in/rakibul-islam-akash-2a0054347/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 rounded-lg border border-border bg-secondary px-3 py-2.5 font-body text-sm text-secondary-foreground transition-all hover:border-primary/40"
@@ -75,8 +75,9 @@ const LeftSidebar = () => {
 
       {/* CV Download */}
       <a
-        href="/Rakibul_Islam_Akash_CSE_AIUB_CV.pdf"
-        download
+        href={`${import.meta.env.BASE_URL}CV_Akash_1.pdf`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="mb-6 flex w-full items-center justify-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-4 py-2.5 font-heading text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground"
       >
         Download CV

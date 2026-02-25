@@ -178,8 +178,9 @@ const CenterContent = () => {
           </button>
         ))}
         <a
-          href="/Rakibul_Islam_Akash_CSE_AIUB_CV.pdf"
-          download
+          href={`${import.meta.env.BASE_URL}CV_Akash_1.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
           className="ml-auto flex items-center gap-2 rounded-lg border border-primary/40 bg-secondary px-4 py-2.5 font-heading text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground"
         >
           <Download size={16} />

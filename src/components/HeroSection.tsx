@@ -69,7 +69,7 @@ const HeroSection = () => {
             <Github size={22} />
           </a>
           <a
-            href="https://linkedin.com/in/rakibul-islam-akash-2a0054347"
+            href="https://www.linkedin.com/in/rakibul-islam-akash-2a0054347/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground transition-colors hover:text-primary"
