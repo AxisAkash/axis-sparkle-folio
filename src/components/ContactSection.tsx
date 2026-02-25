@@ -55,7 +55,7 @@ const ContactSection = () => {
             <ExternalLink className="ml-auto text-muted-foreground" size={14} />
           </a>
           <a
-            href="https://linkedin.com/in/rakibul-islam-akash-2a0054347"
+            href="https://www.linkedin.com/in/rakibul-islam-akash-2a0054347/"
             target="_blank"
             rel="noopener noreferrer"
             className="card-gradient flex items-center gap-3 rounded-xl border border-border p-4 transition-all hover:border-primary/40"
